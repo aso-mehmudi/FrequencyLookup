@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrequencyLookup", "FrequencyLookup.csproj", "{8DE13079-AF0C-4160-BE3B-E87468D112BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DE13079-AF0C-4160-BE3B-E87468D112BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE13079-AF0C-4160-BE3B-E87468D112BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE13079-AF0C-4160-BE3B-E87468D112BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE13079-AF0C-4160-BE3B-E87468D112BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1DE74E9-0DAC-4EF5-9C75-2E6C95597A66}
+	EndGlobalSection
+EndGlobal
