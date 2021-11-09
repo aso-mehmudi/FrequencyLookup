@@ -35,6 +35,7 @@
             <DockPanel DockPanel.Dock="top" Margin="2,0,2,2" x:Name="panelLookup">
                 <DockPanel DockPanel.Dock="Bottom" Height="28">
                     <CheckBox x:Name="chkRTL" Content="Right to Left Texts" IsChecked="False" Margin="0,5" Checked="chkRTL_Checked" Unchecked="chkRTL_Checked"/>
+                    <CheckBox x:Name="chkRegex" Content="Regular expression" IsChecked="False" Margin="10,5,0,5"/>
                 </DockPanel>
                 <Grid>
                     <Grid.ColumnDefinitions>

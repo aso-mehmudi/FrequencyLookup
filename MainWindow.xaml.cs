@@ -7,6 +7,7 @@ using Microsoft.Win32;
 using System.Diagnostics;
 using System.Threading;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 
 namespace FrequencyLookup
@@ -73,14 +74,31 @@ namespace FrequencyLookup
         {
             string[] termList = txtInputList.Text.Split(new[] { '\r', '\n' });
             var output = new StringBuilder();
+            var checkRegex = chkRegex.IsChecked == true;
             foreach (var term in termList)
             {
-                if(string.IsNullOrEmpty(term))
+                if (string.IsNullOrEmpty(term))
                     output.Append("\n");
                 else
                 {
-                    var freq = (FreqDict.ContainsKey(term)) ? FreqDict[term] : 0;
-                    output.Append(term + "\t" + freq + "\n");
+                    if (checkRegex)
+                    {
+                        var sum = 0;
+                        foreach (var key in FreqDict)
+                        {
+                            if (Regex.IsMatch(key.Key, term))
+                            {
+                                output.Append(key.Value + "\t" + key.Key + "\n");
+                                sum += key.Value;
+                            }
+                        }
+                        output.Append("=====\n" + sum);
+                    }
+                    else
+                    {
+                        var freq = (FreqDict.ContainsKey(term)) ? FreqDict[term] : 0;
+                        output.Append(term + "\t" + freq + "\n");
+                    }
                 }
             }
             txtOutputList.Text = output.ToString();
